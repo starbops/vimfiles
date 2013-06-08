@@ -1,32 +1,18 @@
-"version 6.0
-"if !&cp | set cp | endif
-"syntax on
-"set nocompatible
-"set smartindent
-"set tabstop=4
-"set shiftwidth=4
-"set expandtab
-"set bs=indent,eol,start
-"set history=50
-"set background=dark
-"set fileencodings=ucs-bom,utf-8,default,latin1
-"set nomodeline
-"set ruler
-"set cursorline
-" vim: set ft=vim :
-
 filetype off
-"call pathogen#runtime_append_all_bundles()
-execute pathogen#infect()
+"execute pathogen#infect()
+call pathogen#incubate()
+call pathogen#helptags()
 filetype plugin indent on
 set nocompatible
 set modelines=0
 
+" Tabs
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" General
 set encoding=utf-8
 set scrolloff=3
 set autoindent
@@ -42,13 +28,29 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
-set undofile
+set autoread
+set history=700
+set ffs=unix,dos,mac
 
+" Undo
+set undodir=~/.vim/undo
+set undofile
+set undolevels=100
+set undoreload=10000
+
+" We need color
 syntax on
 set background=dark
 
+" But we don't need backups
+set nobackup
+set nowb
+set noswapfile
+
+" Our leader is comma
 let mapleader = ","
 
+" Searching~
 nnoremap / /\v
 vnoremap / /\v
 set ignorecase
@@ -57,6 +59,7 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
+
 nnoremap <tab> %
 vnoremap <tab> %
 
@@ -68,6 +71,7 @@ set colorcolumn=85
 set list
 set listchars=tab:▸\ ,eol:¬
 
+" Disable arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -81,6 +85,7 @@ nnoremap k gk
 
 nnoremap ; :
 
+" Escape from insert mode quickly
 inoremap jj <ESC>
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -93,11 +98,23 @@ inoremap <silent> <F5> <ESC>:YRShow<cr>
 nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
+" Split window
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Tab pages
 nnoremap <leader>h gT
 nnoremap <leader>l gt
+
+" Remove that fucking ^M
+noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+" Remember last edit position
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+set viminfo^=%
