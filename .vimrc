@@ -60,8 +60,8 @@ set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
 
-nnoremap <tab> %
-vnoremap <tab> %
+"nnoremap <tab> %
+"vnoremap <tab> %
 
 set wrap
 set textwidth=79
@@ -88,14 +88,26 @@ nnoremap ; :
 " Escape from insert mode quickly
 inoremap jj <ESC>
 
+" No trailing white spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" NERDTree hotkeys
 nnoremap <leader>n :NERDTree<cr>
 inoremap <leader>n <ESC>:NERDTree<cr>
 nnoremap <silent> <F3> :NERDTree<cr>
 inoremap <silent> <F3> <ESC>:NERDTree<cr>
+
+" YankRing hotkeys
 nnoremap <silent> <F5> :YRShow<cr>
 inoremap <silent> <F5> <ESC>:YRShow<cr>
 nnoremap <leader>v V`]
+
+" Conque hotkeys
+nnoremap <leader>c :ConqueTermSplit bash<cr>
+nnoremap <leader>cv :ConqueTermVSplit bash<cr>
+nnoremap <leader>ct :ConqueTermTab bash<cr>
+
+" Edit .vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Split window

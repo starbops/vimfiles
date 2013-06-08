@@ -9,3 +9,5 @@ Bundles
 * Pathogen
 * NERDTree
 * YankRing
+* Conque Shell
+* snipMate
