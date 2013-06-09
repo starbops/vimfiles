@@ -11,3 +11,4 @@ Bundles
 * YankRing
 * Conque Shell
 * snipMate
+* Fugitive

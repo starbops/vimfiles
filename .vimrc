@@ -120,6 +120,7 @@ nnoremap <C-l> <C-w>l
 " Tab pages
 nnoremap <leader>h gT
 nnoremap <leader>l gt
+nnoremap <leader>e :tabedit 
 
 " Remove that fucking ^M
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
