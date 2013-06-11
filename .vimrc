@@ -94,18 +94,20 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " NERDTree hotkeys
 nnoremap <leader>n :NERDTree<cr>
 inoremap <leader>n <ESC>:NERDTree<cr>
-nnoremap <silent> <F3> :NERDTree<cr>
-inoremap <silent> <F3> <ESC>:NERDTree<cr>
+nnoremap <silent> <F5> :NERDTree<cr>
+inoremap <silent> <F5> <ESC>:NERDTree<cr>
 
 " YankRing hotkeys
-nnoremap <silent> <F5> :YRShow<cr>
-inoremap <silent> <F5> <ESC>:YRShow<cr>
+nnoremap <silent> <F6> :YRShow<cr>
+inoremap <silent> <F6> <ESC>:YRShow<cr>
 nnoremap <leader>v V`]
 
 " Conque hotkeys
 nnoremap <leader>c :ConqueTermSplit bash<cr>
 nnoremap <leader>cv :ConqueTermVSplit bash<cr>
 nnoremap <leader>ct :ConqueTermTab bash<cr>
+nnoremap <silent> <F7> :ConqueTermVSplit bash<cr>
+inoremap <silent> <F7> :ConqueTermVSplit bash<cr>
 
 " Edit .vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
