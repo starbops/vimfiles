@@ -10,7 +10,7 @@ set modelines=0
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+"set expandtab
 
 " General
 set encoding=utf-8
