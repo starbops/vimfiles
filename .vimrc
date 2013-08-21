@@ -69,7 +69,7 @@ set formatoptions=qrn1
 set colorcolumn=85
 
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:►\ ,eol:¬
 
 " Disable arrow keys
 nnoremap <up> <nop>
