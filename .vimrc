@@ -10,7 +10,7 @@ set modelines=0
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-"set expandtab
+set expandtab
 
 " General
 set encoding=utf-8
@@ -66,7 +66,7 @@ nnoremap <leader><space> :noh<cr>
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 set list
 set listchars=tab:►\ ,eol:¬
