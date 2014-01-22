@@ -13,6 +13,7 @@ set softtabstop=4
 set expandtab
 
 " General
+set t_Co=256
 set encoding=utf-8
 set scrolloff=3
 set autoindent
@@ -42,6 +43,13 @@ set undoreload=10000
 " We need color
 syntax on
 set background=dark
+"colorscheme distinguished
+"colorscheme molokai
+
+" Solarized
+let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+colorscheme solarized
 
 " But we don't need backups
 set nobackup
@@ -69,8 +77,8 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
 
-set list
-set listchars=tab:►\ ,eol:¬
+"set list
+"set listchars=tab:►\ ,eol:¬
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -94,9 +102,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " NERDTree hotkeys
 nnoremap <leader>n :NERDTree<cr>
-inoremap <leader>n <ESC>:NERDTree<cr>
+"inoremap <leader>n <ESC>:NERDTree<cr>
 nnoremap <silent> <F5> :NERDTree<cr>
-inoremap <silent> <F5> <ESC>:NERDTree<cr>
+"inoremap <silent> <F5> <ESC>:NERDTree<cr>
 
 " YankRing hotkeys
 nnoremap <silent> <F6> :YRShow<cr>
