@@ -48,7 +48,8 @@ set background=dark
 
 " Solarized
 let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
+let g:solarized_visibility="low"
+let g:solarized_termtrans=1
 colorscheme solarized
 
 " But we don't need backups
@@ -77,7 +78,7 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
 
-"set list
+set list
 "set listchars=tab:►\ ,eol:¬
 
 " Disable arrow keys
@@ -135,6 +136,9 @@ nnoremap <leader>e :tabedit
 
 " Remove that fucking ^M
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+" Toggle line number & list
+nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR><BAR>:set nolist!<CR>
 
 " Remember last edit position
 autocmd BufReadPost *
