@@ -52,6 +52,23 @@ let g:solarized_visibility="low"
 let g:solarized_termtrans=1
 colorscheme solarized
 
+" Customized statusline
+hi User1 ctermfg=208 ctermbg=235 guifg=#eea040 guibg=#073642
+hi User2 ctermfg=196 ctermbg=235 guifg=#dd3333 guibg=#073642
+hi User3 ctermfg=207 ctermbg=235 guifg=#ff66ff guibg=#073642
+hi User4 ctermfg=118 ctermbg=235 guifg=#a0ee40 guibg=#073642
+hi User5 ctermfg=226 ctermbg=235 guifg=#eeee40 guibg=#073642
+set statusline=
+set statusline +=%1*\ %n\ %*            "buffer number
+set statusline +=%5*%{&ff}%*            "file format
+set statusline +=%3*%y%*                "file type
+set statusline +=%4*\ %<%F%*            "full path
+set statusline +=%2*%m%*                "modified flag
+set statusline +=%1*%=%5l%*             "current line
+set statusline +=%2*/%L%*               "total lines
+set statusline +=%1*%4v\ %*             "virtual column number
+set statusline +=%2*0x%04B\ %*          "character under cursor
+
 " But we don't need backups
 set nobackup
 set nowb
@@ -80,6 +97,7 @@ set colorcolumn=80
 
 set list
 "set listchars=tab:►\ ,eol:¬
+set listchars=tab:>-
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -118,6 +136,11 @@ nnoremap <leader>cv :ConqueTermVSplit bash<cr>
 nnoremap <leader>ct :ConqueTermTab bash<cr>
 nnoremap <silent> <F7> :ConqueTermVSplit bash<cr>
 inoremap <silent> <F7> :ConqueTermVSplit bash<cr>
+
+nnoremap <leader>a= :Tabularize /=<cr>
+vnoremap <leader>a= :Tabularize /=<cr>
+nnoremap <leader>a: :Tabularize /:\zs<cr>
+vnoremap <leader>a: :Tabularize /:\zs<cr>
 
 " Edit .vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
