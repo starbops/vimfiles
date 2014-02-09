@@ -112,6 +112,7 @@ nnoremap j gj
 nnoremap k gk
 
 nnoremap ; :
+vnoremap ; :
 
 " Escape from insert mode quickly
 inoremap jj <ESC>
