@@ -97,7 +97,7 @@ set colorcolumn=80
 
 set list
 "set listchars=tab:►\ ,eol:¬
-set listchars=tab:>-
+set listchars=tab:\¦\ 
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -157,6 +157,16 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>h gT
 nnoremap <leader>l gt
 nnoremap <leader>e :tabedit 
+nnoremap <leader>1 :tabmove 0<CR>
+nnoremap <leader>2 :tabmove 1<CR>
+nnoremap <leader>3 :tabmove 2<CR>
+nnoremap <leader>4 :tabmove 3<CR>
+nnoremap <leader>5 :tabmove 4<CR>
+nnoremap <leader>6 :tabmove 5<CR>
+nnoremap <leader>7 :tabmove 6<CR>
+nnoremap <leader>8 :tabmove 7<CR>
+nnoremap <leader>9 :tabmove 8<CR>
+nnoremap <leader>0 :tabmove 9<CR>
 
 " Remove that fucking ^M
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
