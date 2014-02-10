@@ -164,6 +164,9 @@ noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Toggle line number & list
 nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR><BAR>:set nolist!<CR>
 
+" Toggle paste mode
+nnoremap <F3> :set paste!<CR>
+
 " Remember last edit position
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
