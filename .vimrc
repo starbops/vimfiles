@@ -162,7 +162,7 @@ nnoremap <leader>e :tabedit
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Toggle line number & list
-nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR><BAR>:set nolist!<CR>
+nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR><BAR>:set nolist!<CR><BAR>:GitGutterToggle<CR>
 
 " Toggle paste mode
 nnoremap <F3> :set paste!<CR>

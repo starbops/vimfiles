@@ -14,6 +14,7 @@ Bundles
 * Fugitive
 * Tabular
 * XtermColorTable
+* GitGutter
 
 Installation
 ------------
