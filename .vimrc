@@ -14,7 +14,10 @@ set expandtab
 
 " General
 set t_Co=256
+set fileencodings=ucs-bom,utf-8,cp936,big5,gb18030,euc-jp,euc-kr,latin1
+set fileencoding=utf-8
 set encoding=utf-8
+set termencoding=utf-8
 set scrolloff=3
 set autoindent
 set showmode
