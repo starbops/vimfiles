@@ -14,8 +14,6 @@ Bundles
 * Fugitive
 * Tabular
 * XtermColorTable
-* GitGutter
-* indentLine
 
 Installation
 ------------
