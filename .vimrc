@@ -1,4 +1,4 @@
-filetype off
+filetype on
 execute pathogen#infect()
 "call pathogen#incubate()
 "call pathogen#helptags()
@@ -98,9 +98,9 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
 
-set list
+"set list
 "set listchars=tab:►\ ,eol:¬
-set listchars=tab:\¦\ 
+"set listchars=tab:\¦\ 
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -179,6 +179,10 @@ nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR><BAR>:set nolist!
 
 " Toggle paste mode
 nnoremap <F3> :set paste!<CR>
+
+" Highlight trailing whitespaces, [spaces]+[tab] and [tab]+[space]
+autocmd BufNewFile,BufRead * hi ExtraWhitespace ctermbg=red guibg=red
+autocmd BufNewFile,BufRead * match ExtraWhitespace /\s\+$\| \+\ze\t\|\t\+\ze /
 
 " Remember last edit position
 autocmd BufReadPost *
