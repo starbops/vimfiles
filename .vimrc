@@ -52,7 +52,7 @@ set background=dark
 " Solarized
 let g:solarized_termcolors=256
 let g:solarized_visibility="low"
-let g:solarized_termtrans=1
+"let g:solarized_termtrans=1
 colorscheme solarized
 
 " Customized statusline
@@ -175,7 +175,7 @@ nnoremap <leader>0 :tabmove 9<CR>
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Toggle line number & list
-nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR><BAR>:set nolist!<CR>
+nnoremap <F2> :set nonumber!<CR><BAR>:set norelativenumber!<CR>
 
 " Toggle paste mode
 nnoremap <F3> :set paste!<CR>
